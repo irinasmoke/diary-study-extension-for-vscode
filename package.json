@@ -61,7 +61,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts",
-    "test": "npx tsx --test src/test/**/*.test.ts",
+    "test": "npx tsx --test src/test/*.test.ts",
     "package": "vsce package --allow-missing-repository"
   },
   "devDependencies": {
