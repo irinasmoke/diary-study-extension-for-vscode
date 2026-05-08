@@ -4,6 +4,10 @@
   "description": "Capture Copilot Chat sessions for UX research diary studies",
   "version": "0.1.0",
   "publisher": "ms-copilot-diary-study",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/irinasmoke/diary-study-extension-for-vscode.git"
+  },
   "engines": {
     "vscode": "^1.93.0"
   },
