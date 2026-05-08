@@ -2,3 +2,9 @@ node_modules/
 out/
 *.vsix
 .vscode-test/
+
+# Study planning/design docs (kept locally, not in repo)
+AGENTS.md
+diary-study-tool-design.md
+phase3-export-redaction-design.md
+phase3-participant-experience.md
