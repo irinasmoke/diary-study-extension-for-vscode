@@ -1,0 +1,1 @@
+/Users/irinasmoke/Library/CloudStorage/OneDrive-Microsoft/AI Playground/Study Planning/my-studies/azure-skills-mcp-evals/diary study/diary-study-tool-design.md

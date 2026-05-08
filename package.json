@@ -1,0 +1,71 @@
+{
+  "name": "copilot-diary-study",
+  "displayName": "Copilot Diary Study",
+  "description": "Capture Copilot Chat sessions for UX research diary studies",
+  "version": "0.1.0",
+  "publisher": "ms-copilot-diary-study",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "chatParticipants": [
+      {
+        "id": "copilotDiary.diary",
+        "fullName": "Copilot Diary",
+        "name": "diary",
+        "description": "Log this Copilot session to your diary",
+        "isSticky": false,
+        "commands": [
+          {
+            "name": "log",
+            "description": "Log this Copilot Chat session as a diary entry"
+          }
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "copilotDiary.logSession",
+        "title": "Log Copilot Session",
+        "category": "Copilot Diary"
+      },
+      {
+        "command": "copilotDiary.viewAllEntries",
+        "title": "View All Diary Entries",
+        "category": "Copilot Diary"
+      }
+    ],
+    "menus": {
+      "statusBar/item/context": [
+        {
+          "command": "copilotDiary.viewAllEntries",
+          "when": "statusBarItemId == 'copilotDiary.statusBar'",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "npx tsx --test src/test/**/*.test.ts",
+    "package": "vsce package --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.93.0",
+    "@vscode/test-electron": "^2.3.0",
+    "@vscode/vsce": "^3.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.4.0"
+  }
+}
